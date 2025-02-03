@@ -6,7 +6,7 @@ Do you ever miss the ability to unpack function arguments right in the signature
 
 ```py
 def print_point(label, (x, y)):
-    print "({0},{1}; label={2})".format(x, y, label)
+    print "({0},{1}); label={2})".format(x, y, label)
 
 print_point("origin", (420, 69))
 ```
@@ -18,7 +18,7 @@ from nostalgia import nostalgia
 
 @nostalgia
 def print_point(label: "(", x, y: ")"):
-    print(f"({x},{y}; label={label}")
+    print(f"({x},{y}); label={label}")
 
 print_point("origin", (420, 69))
 ```

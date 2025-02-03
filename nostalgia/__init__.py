@@ -45,8 +45,6 @@ def nostalgia(fn):
             text_sig += param.annotation
         text_sig += ","
 
-    print(f"{text_sig=}")
-
     (_in_count, expected_param_names), converter = parse_signature(text_sig)
     if dummy_first_param:
         expected_param_names = ["_", *expected_param_names]
